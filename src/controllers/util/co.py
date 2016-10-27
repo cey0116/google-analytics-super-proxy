@@ -21,7 +21,7 @@ __author__ = 'pete.frisella@gmail.com (Pete Frisella)'
 # Determines if account info is removed from responses.
 # Set to True to remove Google Analytics account info from public responses.
 # TODO(pfrisella): Move this into an Admin Web UI.
-ANONYMIZE_RESPONSES = False
+ANONYMIZE_RESPONSES = True
 
 # Determines which timezone relative dates will be resolved to.
 # North American timezones are supported and UTC.

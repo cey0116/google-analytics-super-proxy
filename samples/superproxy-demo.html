@@ -17,37 +17,55 @@
   <!-- https://developers.google.com/chart/interactive/docs/reference#google.visualization.drawchart -->
   <script type="text/javascript">
     google.setOnLoadCallback(drawVisualization);
-
+    
+    function drawVisualization(){
+      var wrapper = new google.visualization.ChartWrapper({
+          "containerId": "chart_div",
+          "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
+         "refreshInterval": 3600,
+         "chartType": "PieChart",
+         "options": {
+            "showRowNumber" : true,
+            "width": 630,
+            "height": 440,
+            "is3D": true,
+            "title": "Top 5 source/mediums(Last 30 days)"
+         }
+       });
+      wrapper.draw();
+    }
+  </script>
+<!--          
     function drawVisualization() {
 
       var browserWrapper = new google.visualization.ChartWrapper({
           // Example Browser Share Query
          "containerId": "browser",
                           // Example URL: http://your-application-id.appspot.com/query?id=QUERY_ID&format=data-table-response
-         "dataSourceUrl": "REPLACE WITH Google Analytics superProxy PUBLIC URL, DATA TABLE RESPONSE FORMAT",
-         "refreshInterval": REPLACE_WITH_A_TIME_INTERVAL,
+         "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
+         "refreshInterval": 3600,
          "chartType": "PieChart",
          "options": {
             "showRowNumber" : true,
             "width": 630,
             "height": 440,
             "is3D": true,
-            "title": "REPLACE WITH TITLE"
+            "title": "Top 5 source/mediums(Last 30 days)"
          }
        });
 
       var countryWrapper = new google.visualization.ChartWrapper({
         // Example Country Share Query
          "containerId": "country",
-         "dataSourceUrl": "REPLACE WITH Google Analytics superProxy PUBLIC URL, DATA TABLE RESPONSE FORMAT",
-         "refreshInterval": REPLACE_WITH_A_TIME_INTERVAL,
+         "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
+         "refreshInterval": 3600,
          "chartType": "PieChart",
          "options": {
             "showRowNumber" : true,
             "width": 630,
             "height": 440,
             "is3D": true,
-            "title": "REPLACE WITH TITLE"
+            "title": "Top 5 source/mediums(Last 30 days)"
          }
        });
 
@@ -55,11 +73,10 @@
       countryWrapper.draw();
 
     }
-  </script>
-</head>
+</head>i-->
 <body>
   <h1>Pie!</h1>
-  <div id="browser" style="margin:auto;width:630px;"></div>
+  <div id="chart_div" style="margin:auto;width:630px;"></div>
   <div id="country" style="margin:auto;width:630px;"></div>
-</body>
-</html>
+  </body>
+  </html>
