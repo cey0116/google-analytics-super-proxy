@@ -4,6 +4,7 @@
   superProxy. Each chart uses, as a data source, a public superProxy URL
   with the format set to Data Table Response.
 -->
+
 <html>
 <head>
   <title>Pie!</title>
@@ -17,66 +18,44 @@
   <!-- https://developers.google.com/chart/interactive/docs/reference#google.visualization.drawchart -->
   <script type="text/javascript">
     google.setOnLoadCallback(drawVisualization);
-    
-    function drawVisualization(){
-      var wrapper = new google.visualization.ChartWrapper({
-          "containerId": "chart_div",
-          "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
-         "refreshInterval": 3600,
-         "chartType": "PieChart",
-         "options": {
-            "showRowNumber" : true,
-            "width": 630,
-            "height": 440,
-            "is3D": true,
-            "title": "Top 5 source/mediums(Last 30 days)"
-         }
-       });
-      wrapper.draw();
-    }
-  </script>
-<!--          
     function drawVisualization() {
-
       var browserWrapper = new google.visualization.ChartWrapper({
           // Example Browser Share Query
          "containerId": "browser",
                           // Example URL: http://your-application-id.appspot.com/query?id=QUERY_ID&format=data-table-response
-         "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
-         "refreshInterval": 3600,
+         "dataSourceUrl": "https://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
+         "refreshInterval": 300,
          "chartType": "PieChart",
          "options": {
             "showRowNumber" : true,
             "width": 630,
             "height": 440,
             "is3D": true,
-            "title": "Top 5 source/mediums(Last 30 days)"
+            "title": "REPLACE WITH TITLE"
          }
        });
-
       var countryWrapper = new google.visualization.ChartWrapper({
         // Example Country Share Query
          "containerId": "country",
-         "dataSourceUrl": "http://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
-         "refreshInterval": 3600,
+         "dataSourceUrl": "https://my-proxy-app-146018.appspot.com/query?id=ahVzfm15LXByb3h5LWFwcC0xNDYwMThyFQsSCEFwaVF1ZXJ5GICAgICAgIAKDA",
+         "refreshInterval": 300,
          "chartType": "PieChart",
          "options": {
             "showRowNumber" : true,
             "width": 630,
             "height": 440,
             "is3D": true,
-            "title": "Top 5 source/mediums(Last 30 days)"
+            "title": "REPLACE WITH TITLE"
          }
        });
-
       browserWrapper.draw();
       countryWrapper.draw();
-
     }
-</head>i-->
+  </script>
+</head>
 <body>
   <h1>Pie!</h1>
-  <div id="chart_div" style="margin:auto;width:630px;"></div>
+  <div id="browser" style="margin:auto;width:630px;"></div>
   <div id="country" style="margin:auto;width:630px;"></div>
-  </body>
-  </html>
+</body>
+</html>
